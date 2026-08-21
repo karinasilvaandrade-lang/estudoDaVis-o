@@ -1,46 +1,36 @@
-// script.js
 document.addEventListener('DOMContentLoaded', () => {
+    // 1. Seleção segura dos botões do HTML
     const btnContrast = document.getElementById('btn-contrast');
-    const btnIncreaseFont = document.getElementById('btn-increase-font');
-    const btnDecreaseFont = document.getElementById('btn-decrease-font');
+    const btnIncrease = document.getElementById('btn-increase');
+    const btnDecrease = document.getElementById('btn-decrease');
 
-    let currentFontSize = 100; // Porcentagem padrão
+    // Estado inicial da fonte (em porcentagem)
+    let fontSize = 100;
 
-    // Alternar Alto Contraste
-    btnContrast.addEventListener('click', () => {
-        document.body.classList.toggle('high-contrast');
-    });
+    // 2. Evento para o Alto Contraste (Alterna a classe 'high-contrast' no body)
+    if (btnContrast) {
+        btnContrast.addEventListener('click', () => {
+            document.body.classList.toggle('high-contrast');
+        });
+    }
 
-    // Aumentar Fonte
-    btnIncreaseFont.addEventListener('click', () => {
-        if (currentFontSize < 150) { // Limite máximo de 150%
-            currentFontSize += 10;
-            document.documentElement.style.setProperty('--base-font-size', `${currentFontSize}%`);
-        }
-    });
+    // 3. Evento para Aumentar Fonte (Limite máximo: 150%)
+    if (btnIncrease) {
+        btnIncrease.addEventListener('click', () => {
+            if (fontSize < 150) {
+                fontSize += 10;
+                document.documentElement.style.setProperty('--base-font-size', `${fontSize}%`);
+            }
+        });
+    }
 
-    // Diminuir Fonte
-    btnDecreaseFont.addEventListener('click', () => {
-        if (currentFontSize > 70) { // Limite mínimo de 70%
-            currentFontSize -= 10;
-            document.documentElement.style.setProperty('--base-font-size', `${currentFontSize}%`);
-        }
-    });
-});
-// ADICIONAR NO SEU SCRIPT.JS
-document.addEventListener('DOMContentLoaded', () => {
-    const btnContrast = document.getElementById('btn-contrast');
-
-    btnContrast.addEventListener('click', () => {
-        // Liga e desliga a classe 'high-contrast' no body
-        document.body.classList.toggle('high-contrast');
-    });
-});
-document.addEventListener('DOMContentLoaded', () => {
-    const btnContrast = document.getElementById('btn-contrast');
-
-    // Ao clicar, liga/desliga a classe "high-contrast" no body
-    btnContrast.addEventListener('click', () => {
-        document.body.classList.toggle('high-contrast');
-    });
+    // 4. Evento para Diminuir Fonte (Limite mínimo: 80%)
+    if (btnDecrease) {
+        btnDecrease.addEventListener('click', () => {
+            if (fontSize > 80) {
+                fontSize -= 10;
+                document.documentElement.style.setProperty('--base-font-size', `${fontSize}%`);
+            }
+        });
+    }
 });

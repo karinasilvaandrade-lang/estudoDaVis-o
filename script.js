@@ -36,3 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.toggle('high-contrast');
     });
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const btnContrast = document.getElementById('btn-contrast');
+
+    // Ao clicar, liga/desliga a classe "high-contrast" no body
+    btnContrast.addEventListener('click', () => {
+        document.body.classList.toggle('high-contrast');
+    });
+});

@@ -1,6 +1,6 @@
-/* ADICIONAR ESTA REGRA NO CSS */
+/* Quando a classe 'high-contrast' é adicionada ao <body> */
 body.high-contrast {
-    --primary-color: #ffff00; /* Amarelo em destaque */
+    --primary-color: #ffff00; /* Amarelo de alto contraste */
     --primary-light: #000000;
     --text-dark: #ffffff;
     --text-muted: #ffffff;
@@ -9,11 +9,9 @@ body.high-contrast {
     --border-color: #ffffff;
 }
 
+/* Garante que o cabeçalho fique preto com borda branca */
 body.high-contrast header {
     background: #000000;
-    border: 2px solid #ffffff;
-    color: #ffffff;
-}
     border: 2px solid #ffffff;
     color: #ffffff;
 }

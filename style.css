@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CONFIGURAÇÕES GERAIS E VARIÁVEIS
+   VARIÁVEIS & CONFIGURAÇÕES GERAIS
    ========================================================================== */
 :root {
     --primary-color: #2b5c8f;
@@ -11,7 +11,7 @@
     --base-font-size: 100%;
 }
 
-/* Modo Alto Contraste (Sobrescreve as variáveis do tema) */
+/* Modo Alto Contraste */
 body.high-contrast {
     --primary-color: #ffff00 !important;
     --primary-light: #000000 !important;
@@ -30,12 +30,41 @@ body {
     font-size: 1rem;
     background-color: var(--bg-light);
     color: var(--text-dark);
-    line-height: 1.6;
     padding: 20px;
+    line-height: 1.6;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* Ajustes específicos para o modo Alto Contraste */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   BARRA DE ACESSIBILIDADE
+   ========================================================================== */
+.accessibility-bar {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.accessibility-bar button {
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    background: var(--card-bg);
+    color: var(--text-dark);
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+}
+
+.accessibility-bar button:hover,
+.accessibility-bar button:focus {
+    outline: 2px solid var(--primary-color);
+}
+
+/* Ajustes no Alto Contraste */
 body.high-contrast header {
     background: #000000 !important;
     border: 2px solid #ffffff !important;
@@ -46,4 +75,69 @@ body.high-contrast button {
     background: #000000 !important;
     color: #ffff00 !important;
     border-color: #ffffff !important;
+}
+
+/* ==========================================================================
+   CABEÇALHO, SEÇÕES E LISTAS
+   ========================================================================== */
+header {
+    background: var(--primary-color);
+    color: white;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+section {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+ul {
+    margin: 15px 0 15px 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Estilo da Tabela */
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+}
+
+th {
+    background-color: var(--primary-light);
+    color: var(--text-dark);
+}
+
+body.high-contrast th {
+    background-color: #333333 !important;
+    color: #ffffff !important;
 }

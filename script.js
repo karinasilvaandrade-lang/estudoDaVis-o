@@ -1,20 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Seleção segura dos botões do HTML
     const btnContrast = document.getElementById('btn-contrast');
     const btnIncrease = document.getElementById('btn-increase');
     const btnDecrease = document.getElementById('btn-decrease');
 
-    // Estado inicial da fonte (em porcentagem)
     let fontSize = 100;
 
-    // 2. Evento para o Alto Contraste (Alterna a classe 'high-contrast' no body)
+    // Alterna o Alto Contraste
     if (btnContrast) {
         btnContrast.addEventListener('click', () => {
             document.body.classList.toggle('high-contrast');
         });
     }
 
-    // 3. Evento para Aumentar Fonte (Limite máximo: 150%)
+    // Aumenta a Fonte
     if (btnIncrease) {
         btnIncrease.addEventListener('click', () => {
             if (fontSize < 150) {
@@ -24,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. Evento para Diminuir Fonte (Limite mínimo: 80%)
+    // Diminui a Fonte
     if (btnDecrease) {
         btnDecrease.addEventListener('click', () => {
             if (fontSize > 80) {

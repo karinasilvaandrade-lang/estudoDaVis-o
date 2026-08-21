@@ -32,3 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+alert("O JavaScript carregou com sucesso!");
+
+document.addEventListener('DOMContentLoaded', () => {
+    // seu código atual...
+});

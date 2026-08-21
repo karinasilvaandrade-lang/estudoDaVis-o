@@ -27,3 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+// ADICIONAR NO SEU SCRIPT.JS
+document.addEventListener('DOMContentLoaded', () => {
+    const btnContrast = document.getElementById('btn-contrast');
+
+    btnContrast.addEventListener('click', () => {
+        // Liga e desliga a classe 'high-contrast' no body
+        document.body.classList.toggle('high-contrast');
+    });
+});

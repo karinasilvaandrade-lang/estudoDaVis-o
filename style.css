@@ -112,3 +112,19 @@ table {
     border-collapse: collapse;
     text-align: left;
     background: var(--
+    /* ADICIONAR ESTA REGRA NO CSS */
+body.high-contrast {
+    --primary-color: #ffff00; /* Amarelo em destaque */
+    --primary-light: #000000;
+    --text-dark: #ffffff;
+    --text-muted: #ffffff;
+    --bg-light: #000000;
+    --card-bg: #000000;
+    --border-color: #ffffff;
+}
+
+body.high-contrast header {
+    background: #000000;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}

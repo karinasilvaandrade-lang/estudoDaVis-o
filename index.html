@@ -4,142 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Como os Cachorros Enxergam o Mundo</title>
-    <style>
-        /* 1. VARIÁVEIS NORMAIS */
-        :root {
-            --primary-color: #2b5c8f;
-            --primary-light: #eaf2fb;
-            --text-dark: #1e293b;
-            --bg-light: #f8fafc;
-            --card-bg: #ffffff;
-            --border-color: #e2e8f0;
-            --base-font-size: 100%;
-        }
-
-        /* 2. REGRAS DO ALTO CONTRASTE */
-        body.high-contrast {
-            --primary-color: #ffff00 !important;
-            --primary-light: #000000 !important;
-            --text-dark: #ffffff !important;
-            --bg-light: #000000 !important;
-            --card-bg: #000000 !important;
-            --border-color: #ffffff !important;
-        }
-
-        html {
-            font-size: var(--base-font-size);
-        }
-
-        body {
-            font-family: system-ui, sans-serif;
-            font-size: 1rem; /* Permite redimensionar com os botões A+ / A- */
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            padding: 20px;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* Estilo dos Botões */
-        .accessibility-bar {
-            margin-bottom: 20px;
-            display: flex;
-            gap: 10px;
-        }
-
-        .accessibility-bar button {
-            padding: 10px 15px;
-            cursor: pointer;
-            font-weight: bold;
-            background: var(--card-bg);
-            color: var(--text-dark);
-            border: 2px solid var(--border-color);
-            border-radius: 6px;
-        }
-
-        /* Ajuste do Header no Alto Contraste */
-        header {
-            background: var(--primary-color);
-            color: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
-        body.high-contrast header {
-            background: #000000;
-            border: 2px solid #ffffff;
-            color: #ffffff;
-        }
-
-        section {
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--primary-light);
-            padding-bottom: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
-        <!-- BARRA DE BOTOES -->
-        <div class="accessibility-bar">
-            <button id="btn-contrast">Alto Contraste 🌓</button>
-            <button id="btn-decrease">A-</button>
-            <button id="btn-increase">A+</button>
-        </div>
+        <!-- BARRA DE ACESSIBILIDADE -->
+        <nav class="accessibility-bar" aria-label="Controles de acessibilidade">
+            <button id="btn-contrast" aria-label="Alternar alto contraste">Alto Contraste 🌓</button>
+            <button id="btn-decrease" aria-label="Diminuir tamanho do texto">A-</button>
+            <button id="btn-increase" aria-label="Aumentar tamanho do texto">A+</button>
+        </nav>
 
+        <!-- CABEÇALHO -->
         <header>
             <h1>🐶 Como os Cachorros Enxergam o Mundo</h1>
-            <p>Os cachorros enxergam o mundo de um jeito bem diferente do nosso!</p>
+            <p>Os cachorros enxergam o mundo de um jeito bem diferente do nosso! Existe um mito antigo de que eles veem tudo em preto e branco, mas na verdade eles enxergam cores sim, só que com uma paleta mais reduzida, além de terem uma visão super adaptada para a luz.</p>
         </header>
 
-        <section>
-            <h2>🎨 A Visão das Cores</h2>
-            <p>Enquanto os humanos veem três cores primárias, os cães veem apenas tons de azul e amarelo.</p>
-        </section>
+        <main>
+            <!-- SEÇÃO 1: CORES -->
+            <section>
+                <h2>🎨 A Visão das Cores (Visão Dicromática)</h2>
+                <p>Enquanto os humanos têm três tipos de células receptoras de cor nos olhos (cones) — para vermelho, verde e azul —, os cães têm apenas dois tipos (sensíveis ao azul e ao amarelo).</p>
+
+                <ul>
+                    <li><strong>O que eles veem bem:</strong> Tons de azul, amarelo e cinza.</li>
+                    <li><strong>O que eles não diferenciam:</strong> Vermelho e verde. Para um cachorro, aquela bolinha vermelha no gramado verde é vista como tons de amarelo escuro, marrom ou cinza!</li>
+                </ul>
+
+                <p>💡 <strong>Curiosidade:</strong> Se você quiser comprar um brinquedo que se destaque muito para o seu cão na grama, escolha um azul!</p>
+            </section>
+
+            <!-- SEÇÃO 2: LUZ E ESCURO -->
+            <section>
+                <h2>💡 A Visão da Luz e no Escuro</h2>
+                <p>Se por um lado os cães perdem um pouco na variedade de cores, eles dão um show quando o assunto é iluminação e movimento!</p>
+
+                <ul>
+                    <li>
+                        <strong>Visão Noturna:</strong> Os cães possuem muito mais bastonetes (células responsáveis por captar luz e movimento) do que nós. Isso permite que eles enxerguem muito melhor em ambientes com pouca luz.
+                    </li>
+                    <li>
+                        <strong>O "Espelho" nos Olhos (Tapetum Lucidum):</strong> Eles têm uma camada reflexiva atrás da retina chamada <em>tapetum lucidum</em>. Ela funciona como um espelho, refletindo a luz de volta para os olhos e aumentando a capacidade de ver no escuro (é por isso que os olhos deles "brilham" quando uma luz bate neles à noite!).
+                    </li>
+                    <li>
+                        <strong>Detecção de Movimento:</strong> A visão deles é extremamente sensível a pequenos movimentos, o que ajudava seus ancestrais na caça.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- SEÇÃO 3: TABELA COMPARATIVA -->
+            <section>
+                <h2>📊 Comparativo Rápido</h2>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Característica</th>
+                                <th scope="col">Humanos</th>
+                                <th scope="col">Cachorros</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Visão de Cores</strong></td>
+                                <td>Rica (Tricromática: Vermelho, Verde, Azul)</td>
+                                <td>Limitada (Dicromática: Azul e Amarelo)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Visão no Escuro</strong></td>
+                                <td>Razoável</td>
+                                <td>Excelente</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sensibilidade ao Movimento</strong></td>
+                                <td>Moderada</td>
+                                <td>Alta</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
     </div>
 
-    <!-- JAVASCRIPT DIRETO NO HTML -->
-    <script>
-        const btnContrast = document.getElementById('btn-contrast');
-        const btnIncrease = document.getElementById('btn-increase');
-        const btnDecrease = document.getElementById('btn-decrease');
-
-        let fontSize = 100;
-
-        // Função de Alto Contraste
-        btnContrast.onclick = function() {
-            document.body.classList.toggle('high-contrast');
-        };
-
-        // Função Aumentar Fonte
-        btnIncrease.onclick = function() {
-            if (fontSize < 150) {
-                fontSize += 10;
-                document.documentElement.style.setProperty('--base-font-size', fontSize + '%');
-            }
-        };
-
-        // Função Diminuir Fonte
-        btnDecrease.onclick = function() {
-            if (fontSize > 80) {
-                fontSize -= 10;
-                document.documentElement.style.setProperty('--base-font-size', fontSize + '%');
-            }
-        };
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
